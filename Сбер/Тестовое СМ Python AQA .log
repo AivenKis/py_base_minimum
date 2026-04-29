@@ -1,0 +1,67 @@
+Тестовое СМ Python AQA 
+
+Задание 1
+
+Есть два словаря: рецепт пирога и запасы. Написать функцию, которая будет определять, сколько можно испечь пирогов из имеющихся запасов
+
+recipe = {'bread':200, 'sugar':10, 'salt':100, 'milk':50, 'eggs': 2}
+storage = {'bread':1000, 'sugar':1000, 'milk':270, 'salt': 210, 'eggs': 10}
+
+______________________________________________________________________________________________________________________
+Задание 2
+
+Написать функцию, которая выводит все элементы массива, имеющие заданную строку.
+
+Ответ для подстроки sber в list_sample будет: 'sbermarket','sberID', 'sberWeather', 'megasbermarket', 'sberTaxi'
+
+list_sample = ['adkn', 'jjjfje', '12ufbbb','aaai', 'sbermarket','sberID', 'sberWeather', 'megasbermarket', 'sberTaxi']
+
+_____________________________________________________________________________________________________________________________________
+Задание 3*
+
+Какую одну строчку требуется закомментировать, чтобы класс ClsB выводил переменную класса ClsZ?
+
+class ClsZ:
+    env = 'Class Z: Env'
+
+
+class ClsA(ClsZ):
+    def init(self):
+        self.env = 'Class A.init: Env'
+    env = "Class A: Env"
+
+    def cls_env(self):
+        self.env = 'Class A.casd: Env'
+        print(self.env)
+
+
+class ClsB(ClsA):
+
+    def init(self):
+        super().init()
+        print(self.env)
+
+
+a_cls = ClsA()
+a_cls.cls_env()
+
+print("ClsA: " + a_cls.env)
+print("ClsB: " + ClsB.env)
+
+Class A.casd: Env
+ClsA: Class A.casd: Env
+ClsB: Class Z: Env
+
+Дополнительная задача
+
+Напишите функцию modify_list(l), которая принимает на вход список целых чисел, удаляет из него все нечётные значения, а чётные нацело делит на два.
+
+Пример:
+
+lst = [1, 2, 3, 4, 5, 6]
+print(modify_list(lst))  # None
+print(lst)               # [1, 2, 3]
+modify_list(lst)
+print(lst)               # [1]
+
+[1, 3, 4, 6]

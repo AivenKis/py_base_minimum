@@ -57,3 +57,5 @@ git remote set-url --add --push origin URL_ВАШЕГО_РЕПОЗИТОРИЯ_G
 Шаг 2. Проверьте результат
 Введите в терминале команду проверки: git remote -v
 
+Сбросьте настройки push, чтобы удалить ошибочную строку. Выполните команду:
+git remote set-url --delete --push origin URL_ВАШЕГО_РЕПОЗИТОРИЯ_GITLAB
